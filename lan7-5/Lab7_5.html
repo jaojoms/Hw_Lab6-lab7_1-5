@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table{
+            width: auto;
+        }
+        table,th,td
+        {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function adduser(){
+            var textInput = document.getElementById("datauser");
+            var textat = document.getElementById("at");
+            var textphone = document.getElementById("phone");
+
+            var datauser = textInput.value;
+            var at = textat.value;
+            var phone = textphone.value;
+
+            if(datauser == "" || at == "" || phone == ""){
+                return;
+            }
+
+            var table1 = document.createElement("td");
+            table1.innerHTML = datauser;
+            var table2 = document.createElement("td");
+            table2.innerHTML = at;
+            var table3 = document.createElement("td");
+            table3.innerHTML = phone;
+            
+            var tb = document.getElementById("tb");
+            var tr = document.createElement("tr");
+            tr.appendChild(table1);
+            tr.appendChild(table2);
+            tr.appendChild(table3);
+            tb.appendChild(tr)
+        }
+    </script>
+    <title>Lab7_5</title>
+</head>
+<body>
+    <form>
+        ชื่อลูกค้า:<input type="text" id="datauser" required><br>
+        ที่อยู่:<input type="text" id="at" required><br>
+        โทรศัพทร์:<input type="text" id="phone" required>
+        <br>
+        <input type="button" value="เพื่ม" onclick="adduser()">
+    </form>
+    <br>
+    <table id="tb">
+        <tbody>
+            <tr>
+                <td>
+                    ชื่อลูกค้า
+                </td>
+                <td>
+                    ที่อยู่
+                </td>
+                <td>
+                    โทรศัพทร์
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
