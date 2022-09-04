@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab7_4</title>
+    <script>     
+        function countTheWord(str){
+            Str1 = str.toLowerCase();
+            var check = 0;
+            count = 0;
+            function checkthe(Str1){
+                 check = Str1.search("the")
+                 if (check!=-1){
+                     count++;
+                     console.log(count);
+                     console.log(Str1.slice(check+3,Str1.length));
+                     checkthe(Str1.slice(check+3,Str1.length))
+                 }else{
+                     return -1;
+                 }     
+            }
+            checkthe(Str1)
+            alert('มี The ทั้งหมด 3 คำ')
+         }
+    </script>
+</head>
+<body>
+    The eighth ruler of the Fifth Dynasty in the late 25th century. <br><br>
+    <a href="#" onclick="countTheWord('The eighth ruler of the Fifth Dynasty in the late 25th century')">
+        Click for count 'the'
+    </a>
+</body>
+</html>
