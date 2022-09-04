@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab7_1</title>
+    <script>
+        function add(){
+            var a1 = document.getElementById("a1");
+            var a2 = document.getElementById("a2");
+            var a3 = document.getElementById("a3");
+
+            a3.value = Number.parseInt(a1.value)+Number.parseInt(a2.value);
+        }
+    </script>
+</head>
+<body>
+        <input type="text" id="a1" size="10">
+        +
+        <input type="text" id="a2" size="10">
+        =
+        <input type="text" id="a3" size="10">
+        <input type="button" onclick="add()" value="Go Go">
+</body>
+</html>
